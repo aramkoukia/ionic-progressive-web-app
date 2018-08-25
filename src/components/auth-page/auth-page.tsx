@@ -71,12 +71,14 @@ export class AuthPage {
               <img src="/assets/img/icon.png" alt="logo"></img>
             </picture>
 
-            <h1>IonicBeer</h1>
+            <h1>Secure Drive: One Click Renew!</h1>
           </div>
 
           <div id='buttonBlock'>
             <ion-button onClick={() => this.login()} color='primary'>Login with Google</ion-button>
-            <ion-button id='secondButton' onClick={() => this.loginAnon()}>Anonymous Login</ion-button>
+            <ion-button onClick={() => this.login()} color='primary'>Login with Facebook</ion-button>
+            <ion-button onClick={() => this.login()} color='primary'>Login with Twitter</ion-button>
+            {/* <ion-button id='secondButton' onClick={() => this.loginAnon()}>Anonymous Login</ion-button> */}
           </div>
         </main>
       </ion-content>

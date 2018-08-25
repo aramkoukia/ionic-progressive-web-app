@@ -49,7 +49,7 @@ export class ProfileHeader {
           <ion-buttons slot="start">
             <slot></slot>
           </ion-buttons>
-          <ion-title>IonicBeer</ion-title>
+          <ion-title>Secure Drive</ion-title>
 
           {checkAnon() ? null : <ion-buttons slot='end'>
             <ion-button fill='clear' onClick={(ev) => this.openPopover(ev)} icon-only>

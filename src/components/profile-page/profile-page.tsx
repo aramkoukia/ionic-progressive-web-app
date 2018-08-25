@@ -88,7 +88,7 @@ export class ProfilePage {
             <ion-buttons slot="start">
               <ion-back-button defaultHref='/home' />
             </ion-buttons>
-            <ion-title>IonicBeer</ion-title>
+            <ion-title>SecureDrive</ion-title>
           </ion-toolbar>
         </ion-header>,
 
@@ -116,7 +116,7 @@ export class ProfilePage {
             <ion-buttons slot="start">
               <ion-back-button defaultHref='/home' />
             </ion-buttons>
-            <ion-title>IonicBeer</ion-title>
+            <ion-title>Secure Drive</ion-title>
           </ion-toolbar>
         </ion-header>,
 
