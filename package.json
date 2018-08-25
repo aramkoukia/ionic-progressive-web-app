@@ -1,47 +1,41 @@
 {
-  "name": "@ionic/pwa-toolkit",
+  "name": "@stencil/starter",
   "private": true,
   "version": "0.0.1",
-  "description": "Ionic PWA Toolkit",
+  "description": "Stencil Starter App",
   "files": [
-    "dist/"
+    "dist"
   ],
   "scripts": {
-    "build": "stencil build",
-    "start": "stencil build --dev --watch --serve",
-    "start.sw": "npm run start --service-worker",
-    "test": "jest",
-    "test.watch": "jest --watch"
+    "build": "stencil build --stats",
+    "dev": "stencil build --dev --watch --serve",
+    "devWithSW": "sd concurrent \"stencil build --dev --service-worker --watch\"",
+    "functionDev": "stencil build --dev --watch",
+    "serve": "stencil-dev-server",
+    "start": "npm run dev",
+    "deploy": "npm run build && firebase deploy"
   },
   "dependencies": {
-    "@ionic/core": "4.0.0-beta.3",
-    "@stencil/core": "0.11.4"
+    "@ionic/core": "^4.0.0-beta.0",
+    "@stencil/core": "^0.10.9",
+    "am-rating": "0.0.7",
+    "firebase": "4.8.2",
+    "idb-keyval": "^3.0.5",
+    "st-img": "^0.3.0"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.2",
-    "jest": "^22.4.3"
+    "@stencil/dev-server": "latest",
+    "@stencil/utils": "latest",
+    "@types/googlemaps": "^3.30.10"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/ionic-pwa-toolkit.git"
+    "url": "git+https://github.com/ionic-team/stencil-starter.git"
   },
   "author": "Ionic Team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ionic-team/stencil"
   },
-  "homepage": "https://github.com/ionic-team/ionic-pwa-toolkit",
-  "jest": {
-    "transform": {
-      "^.+\\.(js|ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json",
-      "jsx"
-    ]
-  }
+  "homepage": "https://github.com/ionic-team/stencil"
 }

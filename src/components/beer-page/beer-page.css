@@ -1,0 +1,51 @@
+beer-page #stylesBar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+beer-page #stylesBar ion-button {
+  margin-right: 5px;
+}
+
+beer-page #cameraButton, beer-page #cameraButton svg {
+  height: 2em;
+  width: 2em;
+  fill: white;
+}
+
+beer-page ion-content {
+  background: #ececec !important;
+}
+
+beer-page ion-button[disabled] {
+  opacity: 0.5;
+}
+
+beer-page ion-button[disabled] button {
+  color: grey;
+}
+
+@media(min-width: 980px) {
+   beer-page ion-toolbar#searchbar{
+    padding-left: 16em;
+    padding-right: 16em;
+  }
+
+  beer-page #stylesBar {
+    justify-content: center;
+  }
+}
+
+@media(min-width: 1300px) {
+  beer-page ion-toolbar#searchbar {
+    padding-left: 23em;
+    padding-right: 23em;
+  }
+
+  beer-page #stylesBar {
+    justify-content: center;
+  }
+}
+
