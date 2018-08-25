@@ -45,7 +45,7 @@ export class ProfileHeader {
   render() {
     return (
       <ion-header md-height="96px">
-        <ion-toolbar color='dark'>
+        <ion-toolbar color='primary'>
           <ion-buttons slot="start">
             <slot></slot>
           </ion-buttons>

@@ -11,15 +11,15 @@ export class TabsPage {
     return (
       <ion-tabs>
 
-        <ion-tab selected={true} label='Renewals' icon='cloud' name='beer-tab'>
+        <ion-tab label='Coverage' icon='car' name='coverage-tab'>
           <ion-nav></ion-nav>
         </ion-tab>
 
-        <ion-tab label='Coverage' icon='pint' name='coverage-tab'>
+        <ion-tab selected={true} label='Renewals' icon='cart' name='beer-tab'>
           <ion-nav></ion-nav>
         </ion-tab>
 
-        {checkAnon() ? null : <ion-tab label='Deals' icon='star' component='favorites-page'>
+        {checkAnon() ? null : <ion-tab label='Contact' icon='call' component='favorites-page'>
         </ion-tab>}
       </ion-tabs>
     );
