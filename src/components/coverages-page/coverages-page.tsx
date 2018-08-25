@@ -1,45 +1,41 @@
-import { Component, State, Listen } from '@stencil/core';
+import { Component, Element, State, Prop } from '@stencil/core';
 
 import { Coverage } from '../../global/interfaces';
-
-declare var firebase: any;
+import { fetchCoverages } from '../../global/http-service';
 
 @Component({
-  tag: 'coverages-page',
-  styleUrl: 'coverages-page.css'
+  tag: 'coverage-page',
+  styleUrl: 'coverage-page.css'
 })
-export class coveragesPage {
+export class CoveragePage {
 
+  page: number = 1;
+  currentStyle: number = 2;
   @State() coverages: Array<Coverage>;
 
+  @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
+
+
+  @Element() el: Element;
+
   async componentDidLoad() {
-    const tempCoverages = [];
-
-
-    this.getSavedBeers().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        tempCoverages.push(doc.data().beer);
-      })
-
-      this.coverages = tempCoverages;
-    })
+    this.setUpCoverages();
   }
 
-  getSavedBeers() {
-    return firebase.firestore().collection('savedBeers').where('author', '==', firebase.auth().currentUser.email).get();
+  async setUpCoverages() {
+    // set up with first bit of content
+    try {
+      this.coverages = await fetchCoverages();
+    }
+    catch (err) {
+      console.log(err);
+      this.showErrorToast();
+    }
   }
 
-  @Listen('beerDeleted')
-  getFreshBeers() {
-    const tempBeers = [];
-
-    this.getSavedBeers().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        tempBeers.push(doc.data().beer);
-      })
-
-      this.coverages = tempBeers;
-    })
+  async showErrorToast() {
+    const toast = await this.toastCtrl.create({ message: 'Error loading data', duration: 1000 });
+    toast.present();
   }
 
   render() {
@@ -48,7 +44,7 @@ export class coveragesPage {
       </profile-header>,
 
       <ion-content>
-        <coverage-list fave={true} coverages={this.coverages}></coverage-list>
+        <coverage-list fave={false} coverages={this.coverages}></coverage-list>
       </ion-content>
     ];
   }

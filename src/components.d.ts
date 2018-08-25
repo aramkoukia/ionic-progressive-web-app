@@ -442,6 +442,42 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface CoverageItem {
+      'coverage': Coverage;
+      'fave': Boolean;
+    }
+  }
+
+  interface HTMLCoverageItemElement extends StencilComponents.CoverageItem, HTMLStencilElement {}
+
+  var HTMLCoverageItemElement: {
+    prototype: HTMLCoverageItemElement;
+    new (): HTMLCoverageItemElement;
+  };
+  interface HTMLElementTagNameMap {
+    'coverage-item': HTMLCoverageItemElement;
+  }
+  interface ElementTagNameMap {
+    'coverage-item': HTMLCoverageItemElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'coverage-item': JSXElements.CoverageItemAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface CoverageItemAttributes extends HTMLAttributes {
+      'coverage'?: Coverage;
+      'fave'?: Boolean;
+      'onBeerDeleted'?: (event: CustomEvent) => void;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface CoverageList {
       'coverages': Array<Coverage>;
       'fave': Boolean;
@@ -477,30 +513,30 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface CoveragesPage {
+    interface CoveragePage {
 
     }
   }
 
-  interface HTMLCoveragesPageElement extends StencilComponents.CoveragesPage, HTMLStencilElement {}
+  interface HTMLCoveragePageElement extends StencilComponents.CoveragePage, HTMLStencilElement {}
 
-  var HTMLCoveragesPageElement: {
-    prototype: HTMLCoveragesPageElement;
-    new (): HTMLCoveragesPageElement;
+  var HTMLCoveragePageElement: {
+    prototype: HTMLCoveragePageElement;
+    new (): HTMLCoveragePageElement;
   };
   interface HTMLElementTagNameMap {
-    'coverages-page': HTMLCoveragesPageElement;
+    'coverage-page': HTMLCoveragePageElement;
   }
   interface ElementTagNameMap {
-    'coverages-page': HTMLCoveragesPageElement;
+    'coverage-page': HTMLCoveragePageElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'coverages-page': JSXElements.CoveragesPageAttributes;
+      'coverage-page': JSXElements.CoveragePageAttributes;
     }
   }
   namespace JSXElements {
-    export interface CoveragesPageAttributes extends HTMLAttributes {
+    export interface CoveragePageAttributes extends HTMLAttributes {
 
     }
   }

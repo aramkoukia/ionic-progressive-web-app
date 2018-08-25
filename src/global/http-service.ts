@@ -1,5 +1,12 @@
 import { set, get } from 'idb-keyval';
 
+const fetchCoverages = () => {
+  return [
+    {id: "1", name: "coverage 1", description: "", value:0, balance:0, used:0},
+    {id: "2", name: "coverage 2", description: "", value:0, balance:0, used:0},
+  ];
+}
+
 const fetchBeers = async (page: number, style: number = 1) => {
   const key = '0ebd6396901832ee0176a008410ef5d9';
   const url = `https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/beers?key=${key}&p=${page}&styleId=${style}`;
@@ -50,4 +57,4 @@ const getBeerDetail = (id: string) => {
   })
 }
 
-export { fetchBeers, doSearch, getBeerDetail, fetchStyles };
+export { fetchBeers, doSearch, getBeerDetail, fetchStyles, fetchCoverages };

@@ -25,12 +25,12 @@ export class StencilBeer {
               <ion-route url='/beer/:beerId' component='beer-detail' />
             </ion-route>
 
-            <ion-route component='bar-tab'>
-              <ion-route url='/bars' component='bar-page'></ion-route>
-              <ion-route url='/bars/directions/:address/:dest' component='bar-directions'></ion-route>
+            <ion-route component='coverage-tab'>
+              <ion-route url='/coverages' component='coverage-page'></ion-route>
+              <ion-route url='/coverage/:coverageId' component='coverage-detail' />
             </ion-route>
 
-            <ion-route url='/favorites' component='favorites-page'></ion-route>
+            <ion-route url='/deals' component='deals-page'></ion-route>
           </ion-route>
 
           <ion-route url='/profile' component='profile-page'></ion-route>
