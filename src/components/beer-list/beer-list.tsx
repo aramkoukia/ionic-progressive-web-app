@@ -2,7 +2,6 @@ import { Component, Prop } from '@stencil/core';
 
 import { Beer } from '../../global/interfaces';
 
-
 @Component({
   tag: 'beer-list',
   styleUrl: 'beer-list.css'

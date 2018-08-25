@@ -477,6 +477,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface CoveragesPage {
+
+    }
+  }
+
+  interface HTMLCoveragesPageElement extends StencilComponents.CoveragesPage, HTMLStencilElement {}
+
+  var HTMLCoveragesPageElement: {
+    prototype: HTMLCoveragesPageElement;
+    new (): HTMLCoveragesPageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'coverages-page': HTMLCoveragesPageElement;
+  }
+  interface ElementTagNameMap {
+    'coverages-page': HTMLCoveragesPageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'coverages-page': JSXElements.CoveragesPageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface CoveragesPageAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface FavoritesPage {
 
     }

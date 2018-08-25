@@ -19,7 +19,7 @@ export class TabsPage {
           <ion-nav></ion-nav>
         </ion-tab>
 
-        {checkAnon() ? null : <ion-tab label='Deals' icon='star' component='favorites-page'>
+        {checkAnon() ? null : <ion-tab label='Deals' icon='star' component='coverages-page'>
         </ion-tab>}
       </ion-tabs>
     );
