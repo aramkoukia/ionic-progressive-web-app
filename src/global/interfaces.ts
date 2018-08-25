@@ -7,6 +7,15 @@ export interface Beer {
   labels: Labels
 }
 
+export interface Coverage {
+  id: string,
+  name: string,
+  description: string,
+  value: number,
+  used: number,
+  balance: number
+}
+
 export interface Labels {
   medium: string,
   large: string

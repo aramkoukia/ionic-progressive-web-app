@@ -11,7 +11,7 @@ export class TabsPage {
     return (
       <ion-tabs>
 
-        <ion-tab selected={true} label='Coverage' icon='beer' name='beer-tab'>
+        <ion-tab selected={true} label='Coverage' icon='cloud' name='beer-tab'>
           <ion-nav></ion-nav>
         </ion-tab>
 

@@ -31,6 +31,7 @@ import 'ionicons';
 import {
   Bar,
   Beer,
+  Coverage,
 } from './global/interfaces';
 import {
   EventEmitter,
@@ -433,6 +434,41 @@ declare global {
   namespace JSXElements {
     export interface BeerPageAttributes extends HTMLAttributes {
 
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface CoverageList {
+      'coverages': Array<Coverage>;
+      'fave': Boolean;
+    }
+  }
+
+  interface HTMLCoverageListElement extends StencilComponents.CoverageList, HTMLStencilElement {}
+
+  var HTMLCoverageListElement: {
+    prototype: HTMLCoverageListElement;
+    new (): HTMLCoverageListElement;
+  };
+  interface HTMLElementTagNameMap {
+    'coverage-list': HTMLCoverageListElement;
+  }
+  interface ElementTagNameMap {
+    'coverage-list': HTMLCoverageListElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'coverage-list': JSXElements.CoverageListAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface CoverageListAttributes extends HTMLAttributes {
+      'coverages'?: Array<Coverage>;
+      'fave'?: Boolean;
     }
   }
 }
