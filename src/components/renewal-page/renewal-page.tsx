@@ -36,21 +36,51 @@ export class RenewalPage {
     return [
        <profile-header>
        </profile-header>,
-
-      <ion-content>
-
+       <ion-content>
+               <ion-card>
+        <ion-card-content>
+          <ion-card-title>
+            Mechanical Breakdown Protection Renew
+          </ion-card-title>
+            <p>
+              Coverages:
+            </p>
+            <ion-item>
+              <ion-input required type="text" placeholder="Renew for 5 years"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input required type="text" placeholder="Name on the card"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Amount Due (+ tax): 2,300$</ion-label>
+            </ion-item>
+        </ion-card-content>
+        </ion-card>
       <ion-card>
         <ion-card-content>
           <ion-card-title>
-            Renew
+            Online Payment
           </ion-card-title>
-
             <p>
               No description available
             </p>
+            <ion-item>
+              <ion-input required type="text" placeholder="Credit Card Number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input required type="text" placeholder="Name on the card"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Expiry</ion-label>
+              <ion-datetime display-format="MM/DD/YYYY"></ion-datetime>
+            </ion-item>
+            <ion-item>
+              <ion-input required type="text" placeholder="CVV"></ion-input>
+            </ion-item>
         </ion-card-content>
         </ion-card>
-      </ion-content>
+        <ion-button shape="round" color="primary" fill="outline">Pay</ion-button>
+        </ion-content>
     ];
   }
 }

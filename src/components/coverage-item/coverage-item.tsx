@@ -94,13 +94,12 @@ export class CoverageItem {
                 <ion-icon name='star'></ion-icon>
               </ion-button>
             }
-
             <share-button beer={this.beer}></share-button> */}
 
-            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} slot='end' id='detailButton' color='primary' fill='clear'>
+            <ion-button href={`/home/renewals/`} slot='end' id='renewButton' color='primary' fill='clear'>
               Renew
             </ion-button>
-            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} slot='end' id='detailButton' color='primary' fill='clear'>
+            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} slot='end' id='claimsButton' color='primary' fill='clear'>
               Claims
             </ion-button>
             <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} slot='end' id='detailButton' color='primary' fill='clear'>
