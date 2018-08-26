@@ -98,6 +98,12 @@ export class CoverageItem {
             <share-button beer={this.beer}></share-button> */}
 
             <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} slot='end' id='detailButton' color='primary' fill='clear'>
+              Renew
+            </ion-button>
+            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} slot='end' id='detailButton' color='primary' fill='clear'>
+              Claims
+            </ion-button>
+            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} slot='end' id='detailButton' color='primary' fill='clear'>
               Detail
             </ion-button>
           </ion-buttons>

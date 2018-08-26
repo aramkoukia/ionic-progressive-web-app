@@ -915,6 +915,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface RenewalPage {
+
+    }
+  }
+
+  interface HTMLRenewalPageElement extends StencilComponents.RenewalPage, HTMLStencilElement {}
+
+  var HTMLRenewalPageElement: {
+    prototype: HTMLRenewalPageElement;
+    new (): HTMLRenewalPageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'renewal-page': HTMLRenewalPageElement;
+  }
+  interface ElementTagNameMap {
+    'renewal-page': HTMLRenewalPageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'renewal-page': JSXElements.RenewalPageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface RenewalPageAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface SettingsPage {
 
     }
