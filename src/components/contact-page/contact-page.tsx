@@ -43,25 +43,29 @@ export class CoveragePage {
       <profile-header>
       </profile-header>,
 
-      <ion-content>
-        <ion-card>
-        <ion-card-content>
-          <ion-card-title>
-            Contact Us
-          </ion-card-title>
-          <p>
-            assdf
-          </p>
+<ion-content>
+<ion-card>
+<ion-card-content>
+  <ion-card-title>
+    Claims & Dealer Support, by Brand
+  </ion-card-title>
+      <br></br>
+      <p><b>PHONE: </b>1-866-475-8864</p>
+      <p><b>CUSTOMER SERVICE EMAIL:</b> service@lgm.ca</p>
+      <p><b>CLAIMS EMAIL:</b> claims@lgm.ca</p>
 
-          <ion-buttons slot='start'>
-            <ion-button href={`/home/renewals/`} slot='end' id='renewButton' color='primary' fill='clear'>
-              Call
-            </ion-button>
-          </ion-buttons>
+  <ion-buttons slot='start'>
+    <ion-button href={`/home/renewals/`} slot='end' id='renewButton' color='primary' fill='clear'>
+      Call
+    </ion-button>
+    <ion-button href={`/home/renewals/`} slot='end' id='renewButton' color='primary' fill='clear'>
+      Email
+    </ion-button>    
+  </ion-buttons>
 
-        </ion-card-content>
-      </ion-card>
-      </ion-content>
+</ion-card-content>
+</ion-card>
+</ion-content>
     ];
   }
 }
