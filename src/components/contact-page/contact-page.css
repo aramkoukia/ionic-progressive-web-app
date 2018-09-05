@@ -1,0 +1,7 @@
+contact-page h1 {
+  margin-left: 10px;
+}
+
+contact-page ion-scroll {
+  background: #ececec !important;
+}

@@ -9,11 +9,11 @@ export class TabsPage {
     return (
       <ion-tabs>
 
-        <ion-tab label='Beer' icon='beer' name='beer-tab' selected={true}>
+        {/* <ion-tab label='Beer' icon='beer' name='beer-tab' selected={true}>
           <ion-nav></ion-nav>
-        </ion-tab>
+        </ion-tab> */}
 
-        <ion-tab label='Coverage' icon='car' name='coverage-tab'>
+        <ion-tab label='Coverage' icon='car' name='coverage-tab' selected={true}>
           <ion-nav></ion-nav>
         </ion-tab>
 

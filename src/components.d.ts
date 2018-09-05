@@ -442,6 +442,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface ContactPage {
+
+    }
+  }
+
+  interface HTMLContactPageElement extends StencilComponents.ContactPage, HTMLStencilElement {}
+
+  var HTMLContactPageElement: {
+    prototype: HTMLContactPageElement;
+    new (): HTMLContactPageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'contact-page': HTMLContactPageElement;
+  }
+  interface ElementTagNameMap {
+    'contact-page': HTMLContactPageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'contact-page': JSXElements.ContactPageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ContactPageAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface CoverageItem {
       'coverage': Coverage;
       'fave': Boolean;
