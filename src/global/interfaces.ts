@@ -13,7 +13,16 @@ export interface Coverage {
   description: string,
   value: number,
   used: number,
-  balance: number
+  balance: number,
+  claimed: number
+}
+
+export interface Claim {
+  id: string,
+  claimNumber: string,
+  components: string,
+  totalCost: number,
+  date: string
 }
 
 export interface Labels {

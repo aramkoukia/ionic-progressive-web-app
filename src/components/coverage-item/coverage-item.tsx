@@ -87,7 +87,13 @@ export class CoverageItem {
           </ion-item>          
           <ion-item>
             Expired: 19/10/2018
-          </ion-item>                    
+          </ion-item>
+          <ion-item>
+            You have claimed: ${this.coverage.claimed} &nbsp;           
+            <ion-button href={`/home/claims`} color='ion-primary'>
+              Details
+            </ion-button>
+          </ion-item>            
           <ion-item>
             Issuing Dealer: Abbotsford KIA
           </ion-item>          
@@ -109,7 +115,7 @@ export class CoverageItem {
             <ion-button href={`/home/renewals/`} color='primary'>
               Renew
             </ion-button>
-            <ion-button href={`/home/coveragedetail`} color='light'>
+            <ion-button href={`/home/claims`} color='light'>
               Claims
             </ion-button>
             <ion-button href={`/home/coveragedetail`} color='light'>
