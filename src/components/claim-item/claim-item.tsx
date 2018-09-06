@@ -17,17 +17,17 @@ export class ClaimItem {
     return (
       <ion-card>
         <ion-card-content>
-          <ion-card-title>
+          <ion-card-title color="primary">
             Claim Number:{this.claim.claimNumber}
           </ion-card-title>
           <ion-item>
-            Components: {this.claim.components}
+            Components: <b>{this.claim.components}</b>
           </ion-item>
           <ion-item>
-           Claimed on: {this.claim.date}
+           Claimed on: <b>{this.claim.date}</b>
           </ion-item>   
           <ion-item>
-           Total: ${this.claim.totalCost}
+           Total: <b>${this.claim.totalCost}</b>
           </ion-item>     
         </ion-card-content>
       </ion-card>

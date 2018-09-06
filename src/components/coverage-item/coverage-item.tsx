@@ -82,28 +82,25 @@ export class CoverageItem {
           </b>
           </ion-card-title>
           <ion-item>
-            Contract #:&nbsp;<b>95456</b>&nbsp; - &nbsp;<ion-anchor>View Details</ion-anchor>
+            Contract #:&nbsp;<b>{this.coverage.contract}</b>&nbsp; - &nbsp;<ion-anchor>View Details</ion-anchor>
           </ion-item>
           <ion-item>
-            Plan: <b>5 Star</b>
+            Plan: <b>{this.coverage.plan}</b>
           </ion-item>          
           <ion-item>
-            Coverage:&nbsp;<b>60 Months, 130,000 km</b>
+            Coverage:&nbsp;<b>{this.coverage.coverage}</b>
           </ion-item>
           <ion-item>
-            Payment:&nbsp;<b>Monthly, $65.00</b>
+            Payment:&nbsp;<b>{this.coverage.payment}</b>
           </ion-item>                    
           <ion-item>
-            Expiration:&nbsp;<b>2 Oct 2018</b>&nbsp; <ion-icon color="primary" name="alert"></ion-icon>
+            Expiration:&nbsp;<b>{this.coverage.expiration}</b>&nbsp; <ion-icon color="primary" name="alert"></ion-icon>
           </ion-item>
           <ion-item>
-            Claimed:&nbsp;<b>${this.coverage.claimed}</b>&nbsp;           
-            <ion-button href={`/home/claims/${this.coverage.id}`} color='ion-primary'>
-              Details
-            </ion-button>
-          </ion-item>                      
+            Claimed:&nbsp;<b>${this.coverage.claimed}</b>        
+          </ion-item>  
           <ion-item>
-            Issuing Dealer:&nbsp;Abbotsford KIA&nbsp;-&nbsp;<ion-anchor>Contact</ion-anchor>
+            Issuing Dealer:&nbsp;{this.coverage.issuingDealer}&nbsp;-&nbsp;<ion-anchor>Contact</ion-anchor>
           </ion-item>          
 
         <ion-grid>
@@ -116,7 +113,7 @@ export class CoverageItem {
           </ion-row>
           <ion-row align-items-center>
             <ion-col padding-left padding-right text-capitalize size="6">
-              <ion-button expand='full' shape="round" size="large" href={`/home/claims/${this.coverage.id}`} color='light'>
+              <ion-button expand='full' shape="round" size="large" href={`/home/claims`} color='light'>
                 Claims
               </ion-button>
             </ion-col>

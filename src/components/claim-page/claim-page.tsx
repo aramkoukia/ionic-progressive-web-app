@@ -8,12 +8,12 @@ import { fetchClaims } from '../../global/http-service';
 })
 export class ClaimPage {
 constructor(){
-  const params = document.URL.split("/");
-  this.coverageId = params[params.length-1];
+  //const params = document.URL.split("/");
+  //this.coverageId = params[params.length-1];
 }
   page: number = 1;
   currentStyle: number = 2;
-  coverageId: string = "1";
+  coverageId: string = "2";
 
 
   @State() claims: Array<Claim>;
@@ -44,11 +44,16 @@ constructor(){
       )
     });
 
-    return (
+    return [
+            <profile-header>
+            </profile-header>,
+     
+            <ion-content>
       <ion-list>
         {claims}
       </ion-list>
-      );
+      </ion-content>
+    ];
     } else {
       return (
         <ion-list>
