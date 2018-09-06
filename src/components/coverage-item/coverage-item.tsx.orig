@@ -88,20 +88,25 @@ export class CoverageItem {
             Plan: <b>5 Star</b>
           </ion-item>          
           <ion-item>
-            Coverage:&nbsp;<b>60 Months, 130,000 km</b>
+<<<<<<< HEAD
+            Expired: 19/10/2018
           </ion-item>
+          <ion-item>
+            Claimed: ${this.coverage.claimed} &nbsp;           
+            <ion-button href={`/home/claims/${this.coverage.id}`} color='ion-primary'>
+              Details
+            </ion-button>
+          </ion-item>            
+=======
+            Coverage:&nbsp;<b>60 Months, 130,000 km</b>
+          </ion-item>                    
+>>>>>>> 65f91194c59173b01559d6662228af466768ced8
           <ion-item>
             Payment:&nbsp;<b>Monthly, $65.00</b>
           </ion-item>                    
           <ion-item>
             Expiration:&nbsp;<b>2 Oct 2018</b>&nbsp; <ion-icon color="primary" name="alert"></ion-icon>
-          </ion-item>
-          <ion-item>
-            Claimed:&nbsp;<b>${this.coverage.claimed}</b>&nbsp;           
-            <ion-button href={`/home/claims/${this.coverage.id}`} color='ion-primary'>
-              Details
-            </ion-button>
-          </ion-item>                      
+          </ion-item>                    
           <ion-item>
             Issuing Dealer:&nbsp;Abbotsford KIA&nbsp;-&nbsp;<ion-anchor>Contact</ion-anchor>
           </ion-item>          
@@ -116,9 +121,20 @@ export class CoverageItem {
           </ion-row>
           <ion-row align-items-center>
             <ion-col padding-left padding-right text-capitalize size="6">
-              <ion-button expand='full' shape="round" size="large" href={`/home/claims/${this.coverage.id}`} color='light'>
+              <ion-button expand='full' shape="round" size="large" href={`/home/coveragedetail`} color='light'>
                 Claims
               </ion-button>
+<<<<<<< HEAD
+            }
+            <share-button beer={this.beer}></share-button> */}
+
+            <ion-button href={`/home/renewals/`} color='primary'>
+              Renew
+            </ion-button>
+            <ion-button href={`/home/coveragedetail`} color='light'>
+              Detail
+            </ion-button>
+=======
             </ion-col>
             <ion-col padding-left padding-right text-capitalize size="6">
               <ion-button expand='full' shape="round" size="large" href={`/home/coveragedetail`} color='light'>
@@ -127,6 +143,7 @@ export class CoverageItem {
             </ion-col>            
           </ion-row>          
         </ion-grid>          
+>>>>>>> 65f91194c59173b01559d6662228af466768ced8
 
         </ion-card-content>
       </ion-card>
