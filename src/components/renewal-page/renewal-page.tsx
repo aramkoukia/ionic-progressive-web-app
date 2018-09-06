@@ -61,6 +61,9 @@ export class RenewalPage {
           <ion-card-title>
             Payment Information
           </ion-card-title>
+          <ion-item>
+            <img src="../assets/img/credit.png" class="creditcard"/>
+          </ion-item>
             <ion-item>
               <ion-input required type="text" placeholder="Credit Card Number"></ion-input>
             </ion-item>
