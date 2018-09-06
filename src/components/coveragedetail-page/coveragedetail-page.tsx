@@ -46,6 +46,12 @@ export class CoverageDetailPage {
             <ion-item>
               
             </ion-item>            
+            <ion-item>
+              <b>Drive Axle:</b> 
+            </ion-item>            
+            <ion-item>
+              
+            </ion-item>                        
         </ion-card-content>
         </ion-card>
        </ion-content>
