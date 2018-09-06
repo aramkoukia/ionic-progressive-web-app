@@ -1,5 +1,4 @@
-import { Component, Element, Prop } from '@stencil/core';
-
+import { Component, Prop, State } from '@stencil/core';
 import { Claim } from '../../global/interfaces';
 import { fetchClaims } from '../../global/http-service';
 
@@ -8,18 +7,21 @@ import { fetchClaims } from '../../global/http-service';
   styleUrl: 'claim-page.css'
 })
 export class ClaimPage {
-
+constructor(){
+  const params = document.URL.split("/");
+  this.coverageId = params[params.length-1];
+}
   page: number = 1;
   currentStyle: number = 2;
+  coverageId: string = "1";
 
-  @Prop() claims: Array<Claim>;
+
+  @State() claims: Array<Claim>;
+
+
   @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
-  @Prop() fave: Boolean;
 
-
-  @Element() el: Element;
-
-  async claimDidLoad() {
+  async componentDidLoad() {
     try {
       this.claims = await fetchClaims();
     }
@@ -35,9 +37,10 @@ export class ClaimPage {
   }
 
   render() {
-    const claims = this.claims.map((claim) => {
+    if (this.claims) {
+    const claims = this.claims.filter(c => c.coverageId == this.coverageId).map((claim) => {
       return (
-        <claim-item key={claim.id} fave={this.fave} claim={claim}></claim-item>
+        <claim-item claim={claim}></claim-item>
       )
     });
 
@@ -45,6 +48,16 @@ export class ClaimPage {
       <ion-list>
         {claims}
       </ion-list>
-    )
+      );
+    } else {
+      return (
+        <ion-list>
+          <div id='fake-card'></div>
+          <div id='fake-card'></div>
+          <div id='fake-card'></div>
+          <div id='fake-card'></div>
+        </ion-list>
+      )
+    }
   }
 }

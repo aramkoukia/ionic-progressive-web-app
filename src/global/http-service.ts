@@ -9,9 +9,9 @@ const fetchCoverages = () => {
 
 const fetchClaims = () => {
   return [
-    {id: "1", claimNumber: "449675", components: "Roadside for Appearance, Curb scuff - wheel", date: "20 Jun 2018", totalCost: 500},
-    {id: "2", claimNumber: "449683", components: "Roadside for Appearance, Curb scuff - wheel", date: "17 May 2018", totalCost: 500},
-    {id: "3", claimNumber: "449687", components: "Sykes roadside", date: "3 Jan 2018", totalCost: 200}
+    {id: 1, coverageId: "1", claimNumber: "449675", components: "Roadside for Appearance, Curb scuff - wheel", date: "20 Jun 2018", totalCost: 500},
+    {id: 2, coverageId: "2", claimNumber: "449683", components: "Roadside for Appearance, Curb scuff - wheel", date: "17 May 2018", totalCost: 500},
+    {id: 3, coverageId: "2", claimNumber: "449687", components: "Sykes roadside", date: "3 Jan 2018", totalCost: 200}
   ];
 }
 

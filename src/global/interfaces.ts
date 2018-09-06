@@ -18,7 +18,8 @@ export interface Coverage {
 }
 
 export interface Claim {
-  id: string,
+  id: number,
+  coverageId: string,
   claimNumber: string,
   components: string,
   totalCost: number,

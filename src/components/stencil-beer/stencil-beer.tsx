@@ -29,7 +29,7 @@ export class StencilBeer {
               <ion-route component='renewal-page'></ion-route>
             </ion-route>
 
-            <ion-route component='claim-tab' url='/claims'>
+            <ion-route component='claim-tab' url='/claims/:coverageId'>
               <ion-route component='claim-page'></ion-route>
             </ion-route>
 

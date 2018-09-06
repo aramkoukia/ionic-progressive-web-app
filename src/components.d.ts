@@ -445,7 +445,6 @@ declare global {
   namespace StencilComponents {
     interface ClaimItem {
       'claim': Claim;
-      'fave': Boolean;
     }
   }
 
@@ -469,7 +468,6 @@ declare global {
   namespace JSXElements {
     export interface ClaimItemAttributes extends HTMLAttributes {
       'claim'?: Claim;
-      'fave'?: Boolean;
     }
   }
 }
@@ -479,8 +477,7 @@ declare global {
 
   namespace StencilComponents {
     interface ClaimPage {
-      'claims': Array<Claim>;
-      'fave': Boolean;
+
     }
   }
 
@@ -503,8 +500,7 @@ declare global {
   }
   namespace JSXElements {
     export interface ClaimPageAttributes extends HTMLAttributes {
-      'claims'?: Array<Claim>;
-      'fave'?: Boolean;
+
     }
   }
 }

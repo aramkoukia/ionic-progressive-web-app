@@ -89,8 +89,8 @@ export class CoverageItem {
             Expired: 19/10/2018
           </ion-item>
           <ion-item>
-            You have claimed: ${this.coverage.claimed} &nbsp;           
-            <ion-button href={`/home/claims`} color='ion-primary'>
+            Claimed: ${this.coverage.claimed} &nbsp;           
+            <ion-button href={`/home/claims/${this.coverage.id}`} color='ion-primary'>
               Details
             </ion-button>
           </ion-item>            
@@ -114,9 +114,6 @@ export class CoverageItem {
 
             <ion-button href={`/home/renewals/`} color='primary'>
               Renew
-            </ion-button>
-            <ion-button href={`/home/claims`} color='light'>
-              Claims
             </ion-button>
             <ion-button href={`/home/coveragedetail`} color='light'>
               Detail

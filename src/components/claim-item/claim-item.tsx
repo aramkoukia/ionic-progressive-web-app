@@ -8,7 +8,6 @@ import { Claim } from '../../global/interfaces';
 export class ClaimItem {
 
   @Prop() claim: Claim;
-  @Prop() fave: Boolean = false;
   @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
   @Prop({ connect: 'ion-alert-controller' }) alertCtrl: HTMLIonAlertControllerElement;
 
@@ -25,11 +24,11 @@ export class ClaimItem {
             Components: {this.claim.components}
           </ion-item>
           <ion-item>
-           Total: {this.claim.date}
+           Claimed on: {this.claim.date}
           </ion-item>   
           <ion-item>
-           Total: {this.claim.totalCost}
-          </ion-item>          
+           Total: ${this.claim.totalCost}
+          </ion-item>     
         </ion-card-content>
       </ion-card>
     );
