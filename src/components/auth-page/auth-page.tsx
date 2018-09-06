@@ -64,45 +64,25 @@ export class AuthPage {
     return (
       <ion-content>
         <ion-img src="/assets/img/background.png"></ion-img>
-            <ion-item class="fullbutton">
-                <ion-button expand='full' color='medium' class='fullbutton' onClick={() => this.login()}>
-                  <ion-icon ios="logo-google" md="logo-google"></ion-icon> &nbsp;
-                  Sign In with Google
-                </ion-button>
-            </ion-item>
-            <ion-item class="fullbutton">
-                <ion-button expand='full' color='medium' class='fullbutton' onClick={() => this.login()}>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col padding>
+              <ion-button size="large" expand='full' color='medium' class='fullbutton' onClick={() => this.login()}>
+                    <ion-icon ios="logo-google" md="logo-google"></ion-icon> &nbsp;
+                    Sign In with Google
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col padding>
+                <ion-button size="large" expand='full' color='medium' class='fullbutton' onClick={() => this.login()}>
                   <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon> &nbsp;
                   Sign In with Facebook
                 </ion-button>
-            </ion-item>
-          {/* <ion-item-divider></ion-item-divider>
-
-            <ion-item>
-                OR
-            </ion-item>              
-            <ion-item>
-                <ion-input placeholder="User Name"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-input type="password" placeholder="Password"></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label>Stay Signed-In</ion-label>
-              <ion-checkbox checked></ion-checkbox>
-            </ion-item>
-            <ion-item class="fullbutton">
-                <ion-button  class="fullbutton" onClick={() => this.login()} color='primary'>Sign In</ion-button>
-            </ion-item>              
-
-          <ion-item-divider></ion-item-divider>
-
-          <ion-item>
-            <ion-anchor>Forgot your passowrd?</ion-anchor>
-          </ion-item>              
-          <ion-item>
-            <ion-anchor>Forgot your user name?</ion-anchor>
-          </ion-item>                         */}
+            </ion-col>
+          </ion-row>          
+        </ion-grid>          
 
       </ion-content>
     );
