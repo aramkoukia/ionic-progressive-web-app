@@ -59,11 +59,8 @@ export class RenewalPage {
       <ion-card>
         <ion-card-content>
           <ion-card-title>
-            Online Payment
+            Payment Information
           </ion-card-title>
-            <p>
-              No description available
-            </p>
             <ion-item>
               <ion-input required type="text" placeholder="Credit Card Number"></ion-input>
             </ion-item>
@@ -77,7 +74,10 @@ export class RenewalPage {
             <ion-item>
               <ion-input required type="text" placeholder="CVV"></ion-input>
             </ion-item>
-        
+            <ion-item>
+              <ion-label>Save for future use</ion-label>
+              <ion-toggle checked></ion-toggle>
+            </ion-item>
             <ion-button color="primary">Pay</ion-button>
 
         </ion-card-content>
