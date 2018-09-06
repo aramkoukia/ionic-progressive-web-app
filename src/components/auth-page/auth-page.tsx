@@ -67,16 +67,16 @@ export class AuthPage {
 
         <ion-grid>
           <ion-row>
-            <ion-col padding>
-              <ion-button size="large" expand='full' color='medium' class='fullbutton' onClick={() => this.login()}>
+            <ion-col padding-left padding-right text-capitalize>
+              <ion-button padding-left padding-right size="large" expand='full' color='medium' class='fullbutton' onClick={() => this.login()} text-capitalize>
                     <ion-icon ios="logo-google" md="logo-google"></ion-icon> &nbsp;
                     Sign In with Google
               </ion-button>
             </ion-col>
           </ion-row>
           <ion-row>
-            <ion-col padding>
-                <ion-button size="large" expand='full' color='medium' class='fullbutton' onClick={() => this.login()}>
+            <ion-col padding-left padding-right text-capitalize>
+                <ion-button padding-left padding-right size="large" expand='full' color='medium' class='fullbutton' onClick={() => this.login()} text-capitalize>
                   <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon> &nbsp;
                   Sign In with Facebook
                 </ion-button>
