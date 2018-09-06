@@ -76,45 +76,51 @@ export class CoverageItem {
       <ion-card>
         {/* <ion-img src={this.beer.labels ? this.beer.labels.large : '/assets/beers.jpeg'} alt='beer'></ion-img> */}
         <ion-card-content>
-          <ion-card-title>
+          <ion-card-title color="primary">
+          <b>
             {this.coverage.name}
+          </b>
           </ion-card-title>
           <ion-item>
-            Coverage:  Star
+            Contract #:&nbsp;<b>95456</b>&nbsp; - &nbsp;<ion-anchor>View Details</ion-anchor>
           </ion-item>
           <ion-item>
-            Deductible: $100.00
+            Plan: <b>5 Star</b>
           </ion-item>          
           <ion-item>
-            Expired: 19/10/2018
+            Coverage:&nbsp;<b>60 Months, 130,000 km</b>
           </ion-item>                    
           <ion-item>
-            Issuing Dealer: Abbotsford KIA
+            Payment:&nbsp;<b>Monthly, $65.00</b>
+          </ion-item>                    
+          <ion-item>
+            Expiration:&nbsp;<b>2 Oct 2018</b>&nbsp; <ion-icon color="primary" name="alert"></ion-icon>
+          </ion-item>                    
+          <ion-item>
+            Issuing Dealer:&nbsp;Abbotsford KIA&nbsp;-&nbsp;<ion-anchor>Contact</ion-anchor>
           </ion-item>          
-          {/* <p>
-            {this.coverage.description ? this.coverage.description : 'No description available'}
-          </p> */}
 
-            {/* {this.fave ?
-              <ion-button color='danger' onClick={() => this.deleteBeer(this.beer)} fill='clear' icon-only>
-                <ion-icon name='trash'></ion-icon>
+        <ion-grid>
+          <ion-row>
+            <ion-col padding-left padding-right text-capitalize>
+              <ion-button shape="round" expand='full' size="large" href={`/home/renewals/`} color='primary'>
+                Renew Now
               </ion-button>
-              :
-              <ion-button color='primary' onClick={() => this.save(this.beer)} fill='clear' icon-only>
-                <ion-icon name='star'></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row align-items-center>
+            <ion-col padding-left padding-right text-capitalize size="6">
+              <ion-button expand='full' shape="round" size="large" href={`/home/coveragedetail`} color='light'>
+                Claims
               </ion-button>
-            }
-            <share-button beer={this.beer}></share-button> */}
-
-            <ion-button href={`/home/renewals/`} color='primary'>
-              Renew
-            </ion-button>
-            <ion-button href={`/home/coveragedetail`} color='light'>
-              Claims
-            </ion-button>
-            <ion-button href={`/home/coveragedetail`} color='light'>
-              Detail
-            </ion-button>
+            </ion-col>
+            <ion-col padding-left padding-right text-capitalize size="6">
+              <ion-button expand='full' shape="round" size="large" href={`/home/coveragedetail`} color='light'>
+                Details
+              </ion-button>
+            </ion-col>            
+          </ion-row>          
+        </ion-grid>          
 
         </ion-card-content>
       </ion-card>
