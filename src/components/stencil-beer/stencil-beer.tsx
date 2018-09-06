@@ -29,6 +29,10 @@ export class StencilBeer {
               <ion-route component='renewal-page'></ion-route>
             </ion-route>
 
+            <ion-route component='coveragedetail-tab' url='/coveragedetail'>
+              <ion-route component='coveragedetail-page'></ion-route>
+            </ion-route>
+
             {/* <ion-route component='contact-page' url='/contact'></ion-route> */}
 
             <ion-route component='contact-tab' url='/contact'>

@@ -79,10 +79,21 @@ export class CoverageItem {
           <ion-card-title>
             {this.coverage.name}
           </ion-card-title>
-
-          <p>
+          <ion-item>
+            Coverage:  Star
+          </ion-item>
+          <ion-item>
+            Deductible: $100.00
+          </ion-item>          
+          <ion-item>
+            Expired: 19/10/2018
+          </ion-item>                    
+          <ion-item>
+            Issuing Dealer: Abbotsford KIA
+          </ion-item>          
+          {/* <p>
             {this.coverage.description ? this.coverage.description : 'No description available'}
-          </p>
+          </p> */}
 
             {/* {this.fave ?
               <ion-button color='danger' onClick={() => this.deleteBeer(this.beer)} fill='clear' icon-only>
@@ -98,10 +109,10 @@ export class CoverageItem {
             <ion-button href={`/home/renewals/`} color='primary'>
               Renew
             </ion-button>
-            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} color='light'>
+            <ion-button href={`/home/coveragedetail`} color='light'>
               Claims
             </ion-button>
-            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} color='light'>
+            <ion-button href={`/home/coveragedetail`} color='light'>
               Detail
             </ion-button>
 

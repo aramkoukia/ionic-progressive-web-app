@@ -1,0 +1,11 @@
+coveragedetail-page h1 {
+  margin-left: 10px;
+}
+
+coveragedetail-page ion-scroll {
+  background: #ececec !important;
+}
+
+.creditcard {
+  max-width: 500px;
+}
