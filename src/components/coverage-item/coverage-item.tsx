@@ -82,7 +82,7 @@ export class CoverageItem {
           </b>
           </ion-card-title>
           <ion-item>
-            Contract #:&nbsp;<b>95456</b>&nbsp; - &nbsp;<ion-anchor>View Details</ion-anchor>
+            Contract #:&nbsp;<b>95456</b>&nbsp; - &nbsp;<ion-anchor>View PDF</ion-anchor>
           </ion-item>
           <ion-item>
             Plan: <b>5 Star</b>
