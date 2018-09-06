@@ -65,13 +65,13 @@ export class AuthPage {
       <ion-content>
         <ion-img src="/assets/img/background.png"></ion-img>
             <ion-item class="fullbutton">
-                <ion-button color='medium' class='fullbutton' onClick={() => this.login()}>
+                <ion-button expand='full' color='medium' class='fullbutton' onClick={() => this.login()}>
                   <ion-icon ios="logo-google" md="logo-google"></ion-icon> &nbsp;
                   Sign In with Google
                 </ion-button>
             </ion-item>
             <ion-item class="fullbutton">
-                <ion-button color='medium' class='fullbutton' onClick={() => this.login()}>
+                <ion-button expand='full' color='medium' class='fullbutton' onClick={() => this.login()}>
                   <ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon> &nbsp;
                   Sign In with Facebook
                 </ion-button>
