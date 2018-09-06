@@ -51,7 +51,6 @@ export class ProfileHeader {
           </ion-buttons>
           <ion-title>
             <img src="../assets/logo.png" class="page-logo" /> 
-            Secure Drive
           </ion-title>
 
           {checkAnon() ? null : <ion-buttons slot='end'>
