@@ -8,7 +8,11 @@ auth-page #buttonBlock {
   display: flex;
   justify-content: center;
   position: fixed;
-  bottom: 32px;
+  bottom: 100px;
+  width: 100%;
+}
+
+.fullbutton {
   width: 100%;
 }
 
