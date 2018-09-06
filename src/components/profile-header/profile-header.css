@@ -16,4 +16,8 @@ ion-icon {
   border-radius: 50%;
 }
 
+.page-logo {
+  width: 3.5em;
+  padding-right: 1em;
+}
 

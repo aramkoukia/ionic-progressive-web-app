@@ -84,7 +84,6 @@ export class CoverageItem {
             {this.coverage.description ? this.coverage.description : 'No description available'}
           </p>
 
-          <ion-buttons slot='start'>
             {/* {this.fave ?
               <ion-button color='danger' onClick={() => this.deleteBeer(this.beer)} fill='clear' icon-only>
                 <ion-icon name='trash'></ion-icon>
@@ -96,16 +95,15 @@ export class CoverageItem {
             }
             <share-button beer={this.beer}></share-button> */}
 
-            <ion-button href={`/home/renewals/`} slot='end' id='renewButton' color='primary' fill='clear'>
+            <ion-button href={`/home/renewals/`} color='primary'>
               Renew
             </ion-button>
-            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} slot='end' id='claimsButton' color='primary' fill='clear'>
+            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} color='light'>
               Claims
             </ion-button>
-            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} slot='end' id='detailButton' color='primary' fill='clear'>
+            <ion-button href={`/home/coverages/coverage/${this.coverage.id}`} color='light'>
               Detail
             </ion-button>
-          </ion-buttons>
 
         </ion-card-content>
       </ion-card>

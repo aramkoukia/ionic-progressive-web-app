@@ -49,7 +49,10 @@ export class ProfileHeader {
           <ion-buttons slot="start">
             <slot></slot>
           </ion-buttons>
-          <ion-title>Secure Drive</ion-title>
+          <ion-title>
+            <img src="../assets/logo.png" class="page-logo" /> 
+            Secure Drive
+          </ion-title>
 
           {checkAnon() ? null : <ion-buttons slot='end'>
             <ion-button fill='clear' onClick={(ev) => this.openPopover(ev)} icon-only>

@@ -77,9 +77,11 @@ export class RenewalPage {
             <ion-item>
               <ion-input required type="text" placeholder="CVV"></ion-input>
             </ion-item>
+        
+            <ion-button color="primary">Pay</ion-button>
+
         </ion-card-content>
         </ion-card>
-        <ion-button shape="round" color="primary" fill="outline">Pay</ion-button>
         </ion-content>
     ];
   }
