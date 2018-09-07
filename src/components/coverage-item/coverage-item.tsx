@@ -83,7 +83,7 @@ export class CoverageItem {
           </ion-card-title>
           <ion-item>
 
-           Contract #:&nbsp;<b>{this.coverage.contract}</b>&nbsp; - &nbsp;<ion-anchor href="../assets/pdf/MBPcontract.pdf">View PDF</ion-anchor>
+           Contract #:&nbsp;<b>{this.coverage.contract}</b>&nbsp; - &nbsp;<a ion-item download="MPBcontract" href="../assets/pdf/MBPcontract.pdf">View PDF</a>
           </ion-item>
           <ion-item>
             Plan: <b>{this.coverage.plan}</b>
