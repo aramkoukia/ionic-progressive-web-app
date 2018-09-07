@@ -2,7 +2,7 @@ import { set, get } from 'idb-keyval';
 
 const fetchCoverages = () => {
   return [
-    {id: "2", name: "Mechanical Breakdown Protection", contract: "95456", plan: "5 Star", coverage: "60 Months, 130,000 km", payment: "Monthly, $65.00", expiration: "2 Oct 2018", issuingDealer: "Abbotsford KIA", claimed: 500},
+    {id: "2", name: "Mechanical Breakdown Protection", contract: "95456", plan: "5 Star", coverage: "72 Months, 80,000 km", payment: "Monthly, $34.00", expiration: "2 Oct 2018", issuingDealer: "Abbotsford KIA", claimed: 500},
     //{id: "2", name: "Appearance Protection", contract: "95232", plan: "3 Star", coverage: "48 Months, 100,000 km", payment: "Monthly, $55.00", expiration: "23 Sept 2018", issuingDealer: "Abbotsford KIA", claimed: 700},
   ];
 }

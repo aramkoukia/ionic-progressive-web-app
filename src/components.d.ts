@@ -847,6 +847,39 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface OrderPage {
+
+    }
+  }
+
+  interface HTMLOrderPageElement extends StencilComponents.OrderPage, HTMLStencilElement {}
+
+  var HTMLOrderPageElement: {
+    prototype: HTMLOrderPageElement;
+    new (): HTMLOrderPageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'order-page': HTMLOrderPageElement;
+  }
+  interface ElementTagNameMap {
+    'order-page': HTMLOrderPageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'order-page': JSXElements.OrderPageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface OrderPageAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface PopoverPage {
 
     }

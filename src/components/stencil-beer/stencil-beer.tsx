@@ -33,6 +33,10 @@ export class StencilBeer {
               <ion-route component='claim-page'></ion-route>
             </ion-route>
 
+            <ion-route component='order-tab' url='/order'>
+              <ion-route component='order-page'></ion-route>
+            </ion-route>
+
             <ion-route component='coveragedetail-tab' url='/coveragedetail'>
               <ion-route component='coveragedetail-page'></ion-route>
             </ion-route>
