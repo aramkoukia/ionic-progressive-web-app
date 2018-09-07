@@ -1,0 +1,7 @@
+claim-page h1 {
+    margin-left: 10px;
+  }
+  
+claim-page ion-scroll {
+    background: #ececec !important;
+  }  

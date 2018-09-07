@@ -5,7 +5,7 @@ import { fetchCoverages } from '../../global/http-service';
 
 @Component({
   tag: 'coverage-page',
-  // styleUrl: 'coverage-page.css'
+  styleUrl: 'coverages-page.css'
 })
 export class CoveragePage {
 

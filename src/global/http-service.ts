@@ -2,8 +2,16 @@ import { set, get } from 'idb-keyval';
 
 const fetchCoverages = () => {
   return [
-    {id: "1", name: "Mechanical Breakdown Protection", description: "Expires in 15 days", value:0, balance:0, used:0},
-    // {id: "2", name: "Appearance Protection", description: "Expires 20/12/2020", value:0, balance:0, used:0},
+    {id: "2", name: "Mechanical Breakdown Protection", contract: "95456", plan: "5 Star", coverage: "60 Months, 130,000 km", payment: "Monthly, $65.00", expiration: "2 Oct 2018", issuingDealer: "Abbotsford KIA", claimed: 500},
+    //{id: "2", name: "Appearance Protection", contract: "95232", plan: "3 Star", coverage: "48 Months, 100,000 km", payment: "Monthly, $55.00", expiration: "23 Sept 2018", issuingDealer: "Abbotsford KIA", claimed: 700},
+  ];
+}
+
+const fetchClaims = () => {
+  return [
+    {id: 1, coverageId: "1", claimNumber: "449675", components: "Roadside for Appearance, Curb scuff - wheel", date: "20 Jun 2018", totalCost: 500},
+    {id: 2, coverageId: "2", claimNumber: "449683", components: "Roadside for Appearance, Curb scuff - wheel", date: "17 May 2018", totalCost: 500},
+    {id: 3, coverageId: "2", claimNumber: "449687", components: "Sykes roadside", date: "3 Jan 2018", totalCost: 200}
   ];
 }
 
@@ -57,4 +65,4 @@ const getBeerDetail = (id: string) => {
   })
 }
 
-export { fetchBeers, doSearch, getBeerDetail, fetchStyles, fetchCoverages };
+export { fetchBeers, doSearch, getBeerDetail, fetchStyles, fetchCoverages, fetchClaims };

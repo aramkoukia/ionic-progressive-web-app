@@ -31,6 +31,7 @@ import 'ionicons';
 import {
   Bar,
   Beer,
+  Claim,
   Coverage,
 } from './global/interfaces';
 import {
@@ -433,6 +434,72 @@ declare global {
   }
   namespace JSXElements {
     export interface BeerPageAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface ClaimItem {
+      'claim': Claim;
+    }
+  }
+
+  interface HTMLClaimItemElement extends StencilComponents.ClaimItem, HTMLStencilElement {}
+
+  var HTMLClaimItemElement: {
+    prototype: HTMLClaimItemElement;
+    new (): HTMLClaimItemElement;
+  };
+  interface HTMLElementTagNameMap {
+    'claim-item': HTMLClaimItemElement;
+  }
+  interface ElementTagNameMap {
+    'claim-item': HTMLClaimItemElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'claim-item': JSXElements.ClaimItemAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ClaimItemAttributes extends HTMLAttributes {
+      'claim'?: Claim;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface ClaimPage {
+
+    }
+  }
+
+  interface HTMLClaimPageElement extends StencilComponents.ClaimPage, HTMLStencilElement {}
+
+  var HTMLClaimPageElement: {
+    prototype: HTMLClaimPageElement;
+    new (): HTMLClaimPageElement;
+  };
+  interface HTMLElementTagNameMap {
+    'claim-page': HTMLClaimPageElement;
+  }
+  interface ElementTagNameMap {
+    'claim-page': HTMLClaimPageElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'claim-page': JSXElements.ClaimPageAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface ClaimPageAttributes extends HTMLAttributes {
 
     }
   }

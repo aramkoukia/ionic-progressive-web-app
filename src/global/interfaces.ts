@@ -10,10 +10,22 @@ export interface Beer {
 export interface Coverage {
   id: string,
   name: string,
-  description: string,
-  value: number,
-  used: number,
-  balance: number
+  contract: string,
+  plan: string,
+  coverage: string,
+  payment: string,
+  expiration: string,
+  issuingDealer: string,
+  claimed: number
+}
+
+export interface Claim {
+  id: number,
+  coverageId: string,
+  claimNumber: string,
+  components: string,
+  totalCost: number,
+  date: string
 }
 
 export interface Labels {
