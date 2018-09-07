@@ -33,7 +33,6 @@ export class PopoverPage {
     console.log('here');
     this.closePopover.emit();
     await firebase.auth().signOut();
-    // this.history.replace('/', {});
     (document.querySelector('ion-nav') as HTMLIonNavElement).setRoot('auth-page');
   }
 
@@ -41,8 +40,6 @@ export class PopoverPage {
     return (
       <ion-list no-lines>
         <ion-item onClick={() => this.openProfile()}><ion-label>My Profile</ion-label></ion-item>
-        <ion-item onClick={() => this.openAll()}><ion-label>All Users</ion-label></ion-item>
-        <ion-item onClick={() => this.settings()}><ion-label>Settings</ion-label></ion-item>
         <ion-item onClick={() => this.logout()}><ion-label color='danger'>Logout</ion-label></ion-item>
       </ion-list>
     );

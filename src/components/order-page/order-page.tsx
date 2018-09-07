@@ -2,7 +2,7 @@ import { Component } from '@stencil/core';
 
 @Component({
   tag: 'order-page',
-  styleUrl: 'order-page.css'
+  // styleUrl: 'order-page.css'
 })
 export class OrderPage {
 
