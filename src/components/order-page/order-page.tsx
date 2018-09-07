@@ -20,7 +20,7 @@ export class OrderPage {
              &nbsp;
             </ion-item>
             <ion-item>
-            Contract #:&nbsp;<b>102563</b>&nbsp; - &nbsp;<ion-anchor>View PDF</ion-anchor>
+            Contract #:&nbsp;<b>102563</b>&nbsp; - &nbsp;<ion-anchor href="../assets/pdf/MBPcontract.pdf">View PDF</ion-anchor>
           </ion-item>
           <ion-item>
             Plan: <b>5 Star</b>
