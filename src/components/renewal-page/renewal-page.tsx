@@ -26,6 +26,8 @@ export class RenewalPage {
   //page: number = 1;
   //currentStyle: number = 2;
   @State() coverages: Array<Coverage>;
+  @State() isSpinnerHidden: boolean = true;
+  @State() isPayButtonHidden: boolean = false;
 
   @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
 
@@ -47,6 +49,14 @@ export class RenewalPage {
 
   async componentDidLoad() {
     //this.setUpCoverages();
+  }
+
+  onPayClick(){
+    this.isPayButtonHidden = this.isSpinnerHidden;
+    this.isSpinnerHidden = !this.isSpinnerHidden;
+    window.location.href = "/home/order";
+
+    //window.location.replace("/home/order");
   }
 
   // async setUpCoverages() {
@@ -113,11 +123,9 @@ export class RenewalPage {
               <ion-datetime display-format="MM/YY" min="2018" max="2028" slot="start" placeholder="Expiry"></ion-datetime><ion-input required type="text" placeholder="CVV" slot="end" max="999"></ion-input>
             </ion-item>
             <ion-item>
-              
-              
             </ion-item>
-            <ion-button expand='full' shape="round" size="large" color="primary"  href={`/home/order`}>Pay</ion-button>
-
+            {/* <ion-spinner id="spinner" name="bubbles" hidden={this.isSpinnerHidden}></ion-spinner> */}
+            <ion-button expand='full' shape="round" size="large" color="primary" href="/home/order">Pay</ion-button>
         </ion-card-content>
         </ion-card>
         </ion-content>
